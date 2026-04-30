@@ -45,7 +45,7 @@ def delete_menu_item(db: Session, item_id: int):
 
 # ── Orders ─────────────────────────────────────────────────────────────────────
 def _generate_order_id():
-    return "#" + str(random.randint(1000, 9999))
+    return "ORD" + str(random.randint(1000, 9999))
 
 
 def create_order(db: Session, order: OrderCreate):
