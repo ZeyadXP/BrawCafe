@@ -65,23 +65,6 @@ Interactive API docs: `http://localhost:8000/docs`
 
 ---
 
-## Deploy to Railway (Free)
-
-1. Push to GitHub
-2. Go to [railway.app](https://railway.app) → New Project → Deploy from GitHub
-3. Select your repo
-4. Set environment variable: `EMPLOYEE_PIN=your_secret_pin`
-5. Done — Railway uses `railway.json` automatically
-
-## Deploy to Render (Free)
-
-1. Push to GitHub
-2. Go to [render.com](https://render.com) → New Web Service → Connect GitHub
-3. Render reads `render.yaml` automatically
-4. Change `EMPLOYEE_PIN` in the Render dashboard environment variables
-
----
-
 ## Environment Variables
 
 | Variable | Default | Description |
