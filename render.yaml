@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: brewhaus-cafe
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    envVars:
+      - key: EMPLOYEE_PIN
+        value: 1234   # ← change this in Render dashboard!
+      - key: DATABASE_URL
+        value: sqlite:///./brewhaus.db  # or use a Postgres addon
