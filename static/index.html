@@ -512,6 +512,7 @@ async function placeOrder() {
   try {
     const order   = await POST('/api/orders', { customer, items });
     currentOrderId = order.id;
+    localStorage.setItem('currentOrderId', order.id);
     cart = [];
     updateCartCount();
     closeCart();
@@ -869,7 +870,8 @@ function showToast(msg) {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
-loadMenu();
+currentOrderId = localStorage.getItem('currentOrderId') || null;
+renderMenu();
 </script>
 </body>
 </html>
